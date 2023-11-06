@@ -1,4 +1,24 @@
 from fastapi import FastAPI
+import psycopg2
+
+# connect to db
+conn = psycopg2.connect(
+    host="bdd",
+    port="5432",
+    database="john",
+    user="john",
+    password="example"
+)
+
+cur = conn.cursor()
+cur.execute("""
+CREATE TABLE IF NOT EXISTS public.books
+(
+    id uuid DEFAULT gen_random_uuid(),
+    name character varying(255) COLLATE pg_catalog."default"
+);
+""")
+cur.close()
 
 app = FastAPI()
 
@@ -15,4 +35,9 @@ def create_book():
 
 @app.get("/books")
 def list_books():
-    return 'book list'
+    # -> select items from db
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM books')
+    books = cur.fetchall()
+    cur.close()
+    return books
