@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 import psycopg2
 
 # connect to db
@@ -29,8 +30,12 @@ def index():
     # We return books, without any kind of formatting.
     return ['book 1', 'book 2', 'book 3']
 
+class Book(BaseModel):
+    name: str
+
 @app.post("/books")
-def create_book():
+def create_book(book: Book):
+    print(book.name)
     return 'book_created'
 
 @app.get("/books")
