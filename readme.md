@@ -1,5 +1,8 @@
 ## Docker compose / beginners course
 
+## Main course doc
+- https://tinyurl.com/yc43bxn5
+
 ### How to start
 - docker-compose up
   - allows you to startup both web (python FastAPI webserver) & database (PostgreSQL) services
