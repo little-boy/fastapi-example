@@ -85,5 +85,15 @@ You want to see if you master these basics ? Reproduce this repository
 
 ## Kubernetes / k8s
 - Used in demo : kubectl (or alias "k")
-  - kubect create deployment {deployment-name} --image={image name}
-    - ex: kubectl create deployment my-api --image=littleboy/my-python-app:0.0.1
+  - `kubectl {action} {resource type} ...`
+  - `kubectl create deployment {deployment name} --image={image name}` : create a deployment / create a container
+  - `kubectl edit deployment {image name}`
+  - `kubectl delete deployment {image name}`
+  - `kubectl get pods` list all pods in current cluster
+  - `kubectl logs {pod id}` : get logs
+  - `kubectl logs -f {pod id}` : get logs
+  - `kubectl exec -it {pod id} bash` : open a cli into a pod
+  - `kubectl port-forward {pod id} {machine port}:{container port}`
+  - `kubectl delete {pod id}`
+  - `kubectl apply -f infra/deployment.yml`
+  - `kubectl describe deployment {deployment name}`
