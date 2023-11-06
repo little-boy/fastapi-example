@@ -82,3 +82,8 @@ You want to see if you master these basics ? Reproduce this repository
 - all of this containerised.
 
 /!\ Presentation (slides) of this course will be communicated on monday 06/11/2023, see you !
+
+## Kubernetes / k8s
+- Used in demo : kubectl (or alias "k")
+  - kubect create deployment {deployment-name} --image={image name}
+    - ex: kubectl create deployment my-api --image=littleboy/my-python-app:0.0.1

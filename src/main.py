@@ -1,20 +1,20 @@
 from fastapi import FastAPI
 import psycopg2
-import sys
-
-sys.stdout.flush()
+# import sys
+#
+# sys.stdout.flush()
 
 # We connect to the database (Postgres) with :
 # - psycopg2 package
 # - infos coming from the setup we did in docker-compose.yml
 # http://bdd:5432
-conn = psycopg2.connect(
-    host="bdd",
-    port="5432",
-    database="john",
-    user="john",
-    password="example"
-)
+# conn = psycopg2.connect(
+#     host="bdd",
+#     port="5432",
+#     database="john",
+#     user="john",
+#     password="example"
+# )
 
 app = FastAPI()
 
@@ -31,3 +31,9 @@ def list_books():
     # We return books, without any kind of formatting.
     return books
 
+@app.get("/")
+def index():
+    print('HIT')
+
+    # We return books, without any kind of formatting.
+    return ['book 1', 'book 2']
