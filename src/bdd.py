@@ -26,5 +26,5 @@ cur.execute("""
  INSERT INTO books (name)
  VALUES (%s);
  """,
- 'Da Vinci Code')
+ ('Da Vinci Code', ))
 cur.close()

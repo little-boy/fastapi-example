@@ -35,8 +35,13 @@ class Book(BaseModel):
 
 @app.post("/books")
 def create_book(book: Book):
-    print(book.name)
-    return 'book_created'
+    # -> insert item into db
+    cur = conn.cursor()
+    cur.execute('INSERT INTO books (name) VALUES (%s)', (book.name,))
+    conn.commit()
+    cur.close()
+
+    return 'OK'
 
 @app.get("/books")
 def list_books():
