@@ -55,20 +55,20 @@ Commiter tous les fichiers courants :
 - git commit -am "description du commit"
 
 ### instructions 
-1 - créer un dossier avec des fichiers (n'importe lesquels)
+1. créer un dossier avec des fichiers (n'importe lesquels)
     -> ex : copier les fichiers fastapi-example à l'exception du dossier .git
-2 - créer un repository
-3 - initialiser le repository : 
+2. créer un repository
+3. initialiser le repository : 
     - git init
     - git add . 
     - git commit -m "first commit"
     - git branch -M main
     - git remote add origin https://github.com/{votre pseudo}/git-exercise.git
     - git push -u origin main
-4 - créer une branche
-5 - créer des fichiers avec ce que vous voulez dedans
-6 - commit / push 
-7 - merger la branche
+4. créer une branche
+5. créer des fichiers avec ce que vous voulez dedans
+6. commit / push 
+7. merger la branche
 
 
 /!\ changer de branche : 
