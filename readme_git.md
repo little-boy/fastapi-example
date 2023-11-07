@@ -7,6 +7,54 @@
   - Mercurial
 - Partager du code
 - Remonter le temps
+
+- git checkout {commit hash}
+    - ca permet de dire que on se met à une version antérieure du code (repo..)
+    - hash : genere une chaine avec plus ou moins d'entropie, peu sécurisé pour le md5 / sha1
+        - lorsqu'on hash une chaine, on ne peut revenir en arriere à partir de la chaine générée
+        - souvent utilisé pour le stockage des mots de passe
+        - ex: md5 / sha1 / sha256...
+    - chiffrage : 
+        - genere une chaine "chiffrée" que l'on peut "déchiffrer" = on peut revenir en arrière en connaissant l'algorithme.
+ 
+- git checkout {branch}
+    - changer de branche
+
+
+Voir l'état courant des modifications : 
+- git status
+
+Pousser les modifications sur le repository : 
+- git push
+- git push origin HEAD
+
+Créer une branche, enregistrer des modifs, et la pousser sur Github : 
+- git checkout -b {branch name}
+- git add 
+- git commit (sauvegarder mes modifications sur la branche courante)
+- git push origin HEAD
+
+Supprimer (nettoyer) une branche mergée 
+- git branch -d {branch name}
+
+Lister les branches : 
+- git branch
+
+Lister les commits passés :
+- git log 
+- (sortir de git log : appuyer sur la touche "q")
+
+Ajouter un fichier dans les fichiers évalués par Git : 
+- git add {path to file}
+
+Ajouter tous les nouveaux fichiers : 
+- git add .
+
+Commiter tous les fichiers courants : 
+- git commit -m "description du commit"
+- git commit -am "description du commit"
+
+### instructions 
 1 - créer un dossier avec des fichiers (n'importe lesquels)
     -> ex : copier les fichiers fastapi-example à l'exception du dossier .git
 2 - créer un repository
