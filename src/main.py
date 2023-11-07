@@ -50,4 +50,5 @@ def list_books():
     cur.execute('SELECT * FROM books')
     books = cur.fetchall()
     cur.close()
+
     return books
