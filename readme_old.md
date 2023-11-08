@@ -81,8 +81,6 @@ You want to see if you master these basics ? Reproduce this repository
 - create an endpoint that list the data
 - all of this containerised.
 
-/!\ Presentation (slides) of this course will be communicated on monday 06/11/2023, see you !
-
 ## Kubernetes / k8s
 - Used in demo : kubectl (or alias "k")
   - `kubectl {action} {resource type} ...`
