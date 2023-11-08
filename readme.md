@@ -31,7 +31,7 @@ Create, list... books for Amazon.
   - List containers running : `docker ps`,
   - Copy container id,
   - Run : `docker exec -it {container id} bash`
-- [Cheatsheet docker / docker-compose / k8s](./readme_old.md)
+- [Cheatsheet docker / docker-compose / k8s](./readme_docker.md)
 
 
 ## How to test
